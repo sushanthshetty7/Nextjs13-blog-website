@@ -1,0 +1,35 @@
+
+
+
+.imgcontainer{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.imageText{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #53c28b;
+    padding: 5px;
+    color: white;
+}
+
+.img{
+    object-fit: cover;
+}
+
+
+.textcontainer{
+    display: flex;
+    gap: 100px;
+}
+
+.item {
+    flex: 1;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }

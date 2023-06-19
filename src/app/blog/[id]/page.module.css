@@ -1,0 +1,36 @@
+.top{
+    display: flex;
+    gap: 100px;
+    margin-bottom: 50px;
+}
+
+
+.topleft{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.author{
+    display: flex;
+    gap: 10px;
+    
+    align-items: center;
+    
+}
+
+
+.autimg{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.topright{
+    flex: 1;
+}
+
+
+.img{
+    object-fit: cover;
+}

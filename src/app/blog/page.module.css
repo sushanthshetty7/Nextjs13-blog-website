@@ -1,0 +1,17 @@
+.items{
+    display: flex;
+    gap: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+
+.img{
+    object-fit: cover;
+}
