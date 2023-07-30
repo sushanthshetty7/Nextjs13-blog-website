@@ -1,11 +1,14 @@
+"use client"
 import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import Error from 'next/error'
 
 
-async function getdata(){
-  const resp = await fetch("https://jsonplaceholder.typicode.com/posts",{cache:'no-store'})
+const  getdata=async()=>{
+  const resp = await fetch("http://localhost:3000/api/posts")
+  
   if(!resp.ok){
     throw new Error("failed to fetch data")
   }
@@ -18,14 +21,14 @@ const Blog = async()=> {
   const data = await getdata()
   return (
     <div className={styles.blog}>
-      {data.map((item)=>
+      {data.map(item=>
         (
-          <Link href='/blog/testId' className={styles.items} key={item.id}>
+          <Link href={`/blog/${item._id}`} className={styles.items} key={item.id}>
           <div className={styles.item}>
-            <Image src={"https://images.pexels.com/photos/2103127/pexels-photo-2103127.jpeg"} height={250} width={400} className={styles.img}/>
+            <Image src={''} height={250} width={400} className={styles.img}/>
             <h1>{item.title}</h1>
           </div>
-          </Link>
+          </Link> 
         )
       )}
      
@@ -33,4 +36,4 @@ const Blog = async()=> {
   )
 }
 
-export default Blog
+export default Blog  
